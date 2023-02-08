@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/main.css">
+    <title>Matrix</title>
+</head>
+<body>
+
+    <div class="heading">
+    <h1>FOR MATRIX CALCULATIONS</h1>
+    <h3>By AK Deepankar</h3>
+    </div>
+
+    <form class = "form" method="post">
+        <input type="number" step="1" id="one" name="a11" placeholder="a11" >
+        <input type="number" step="1" id="two" name="a12" placeholder="a22">
+        <input type="number" step="1" id="three" name="a13" placeholder="a13">
+        <br>
+        <br>
+        <input type="number" step="1" id="four" name="a21" placeholder="a21">
+        <input type="number" step="1" id="five" name="a22" placeholder="a22">
+        <input type="number" step="1" id="six" name="a23" placeholder="a23">
+        <br>
+        <br>
+        <input type="number" step="1" id="seven" name="a31" placeholder="a31">
+        <input type="number" step="1" id="eight" name="a32" placeholder="a32">
+        <input type="number" step="1" id="nine" name="a33" placeholder="a33">
+        <br>
+        <br>
+        <button type="submit">FIND DETERMINANT</button>
+    </form>
+
+    <h2>THE DETERMINANT IS : {{ values }} {{ noValue }} </h2>
+
+</body>
+</html>
