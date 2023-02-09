@@ -5,14 +5,13 @@
     <link rel="stylesheet" href="/static/main.css">
     <title>Matrix</title>
 </head>
+
 <body>
-
-    <div class="heading">
-    <h1>FOR MATRIX CALCULATIONS</h1>
-    <h3>By AK Deepankar</h3>
-    </div>
-
+   <div class="container">
+   <div>
     <form class = "form" method="post">
+        <h2>FOR MATRIX CALCULATIONS</h2>
+        <h3>By AK Deepankar</h3>
         <input type="number" step="1" id="one" name="a11" placeholder="a11" >
         <input type="number" step="1" id="two" name="a12" placeholder="a22">
         <input type="number" step="1" id="three" name="a13" placeholder="a13">
@@ -29,9 +28,27 @@
         <br>
         <br>
         <button type="submit">FIND DETERMINANT</button>
+        <h2>THE DETERMINANT IS : {{ values }} </h2>
+        <br>
     </form>
+    </div>
+    <div>
+    <button onclick="darkMode()">DarkMode</button>
+    <button onclick="lightMode()">LightMode</button>
+    </div>
+   </div>
 
-    <h2>THE DETERMINANT IS : {{ values }} {{ noValue }} </h2>
+    <script>
+      function darkMode() {
+        let element = document.body;
+        element.className = "dark-mode";
+      }
+      function lightMode() {
+        let element = document.body;
+        element.className = "light-mode";
+      }
+    </script>
 
 </body>
+
 </html>

@@ -5,7 +5,6 @@ from Matrix import Determinant
 
 app = Flask(__name__)
 
-
 @app.route('/', methods=["GET", "POST"])
 def matrix():
     try:
@@ -22,7 +21,7 @@ def matrix():
             value = Determinant.order3(a11, a12, a13, a21, a22, a23, a31, a32, a33)
             return render_template("matrix.html", values=value)
     except ValueError:
-        return render_template("matrix.html", noValue="MISSING NUMBERS")
+        return render_template("matrix.html", values="MISSING NUMBERS")
     return render_template("matrix.html")
 
 
